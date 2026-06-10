@@ -1,5 +1,9 @@
 {{ define "main" }}
-<main>
-  {{ .Content }}
+<main class="page-shell">
+  <section class="surface intro">
+    <p class="kicker">{{ .Section }}</p>
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+  </section>
 </main>
 {{ end }}
