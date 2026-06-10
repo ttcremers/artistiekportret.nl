@@ -24,10 +24,11 @@ make build
 
 Cloudflare Pages should use the Hugo preset with these settings:
 
-- build command: `hugo`
+- build command: `hugo -b $CF_PAGES_URL`
 - build output directory: `public`
 - production branch: `main`
 - preview deployments: all non-production branches and pull requests
+- environment variable: `HUGO_VERSION` in both Production and Preview
 
 See [Cloudflare Pages deployment](docs/cloudflare-pages.md) for the manual dashboard steps.
 
