@@ -4,6 +4,22 @@ A calm, carefully crafted website for **Theodoor Thomas** and his artistic portr
 
 The public site will be built as a lightweight static website with Hugo and deployed through Cloudflare Pages. The first goal is not a feature-rich platform, but a clear and welcoming digital front door: fast, accessible, image-led and easy to find.
 
+## Local development
+
+Run the Hugo development server from the repository root:
+
+```powershell
+hugo server
+```
+
+## Production build
+
+Build the static site from the repository root:
+
+```powershell
+hugo
+```
+
 ## Positioning
 
 **Artistieke portretfotografie in Den Haag**

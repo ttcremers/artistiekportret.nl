@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="{{ site.Language.LanguageCode | default "nl-NL" }}">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body>
+    <div id="site">
+      {{ block "main" . }}{{ end }}
+    </div>
+  </body>
+</html>
