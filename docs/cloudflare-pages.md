@@ -4,8 +4,9 @@
 
 Use the Cloudflare Pages Hugo preset with:
 
-- build command: `hugo`
+- build command: `hugo -b $CF_PAGES_URL`
 - build output directory: `public`
+- environment variable: `HUGO_VERSION`
 
 ## Branch behavior
 
@@ -14,13 +15,16 @@ Use the Cloudflare Pages Hugo preset with:
 
 Cloudflare Pages uses branch deployment controls to manage production and preview deployments. The default setup is to deploy every commit to the production branch and to create preview deployments for other branches.
 
+Set `HUGO_VERSION` in both the Production and Preview environments so both deployment types build with the same Hugo version.
+
 ## Manual dashboard steps
 
 1. Create or connect the Cloudflare Pages project to the GitHub repository.
-2. Select the Hugo preset, or set the build command to `hugo` and the output directory to `public`.
-3. Set the production branch to `main`.
-4. Leave preview deployments enabled for all non-production branches.
-5. Add the custom domain later, once DNS access is available.
+2. Select the Hugo preset, or set the build command to `hugo -b $CF_PAGES_URL` and the output directory to `public`.
+3. Set `HUGO_VERSION` in both the Production and Preview environment variables.
+4. Set the production branch to `main`.
+5. Leave preview deployments enabled for all non-production branches.
+6. Add the custom domain later, once DNS access is available.
 
 ## Notes
 
