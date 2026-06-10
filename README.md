@@ -20,6 +20,17 @@ Build the static site through Docker from the repository root:
 make build
 ```
 
+## Cloudflare Pages
+
+Cloudflare Pages should use the Hugo preset with these settings:
+
+- build command: `hugo`
+- build output directory: `public`
+- production branch: `main`
+- preview deployments: all non-production branches and pull requests
+
+See [Cloudflare Pages deployment](docs/cloudflare-pages.md) for the manual dashboard steps.
+
 ## Positioning
 
 **Artistieke portretfotografie in Den Haag**
@@ -33,6 +44,7 @@ The work sits between a photographic session and a painted portrait. The offer i
 - [Design direction](docs/design-direction.md)
 - [Content plan](docs/content-plan.md)
 - [Architecture](docs/architecture.md)
+- [Cloudflare Pages deployment](docs/cloudflare-pages.md)
 - [Roadmap](docs/roadmap.md)
 
 ## Working method
