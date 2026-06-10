@@ -1,6 +1,6 @@
 services:
   hugo:
-    image: hugomods/hugo:exts
+    image: hugomods/hugo:exts-0.154.5
     working_dir: /src
     volumes:
       - .:/src
