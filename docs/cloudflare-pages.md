@@ -17,6 +17,12 @@ Cloudflare Pages uses branch deployment controls to manage production and previe
 
 Set `HUGO_VERSION=0.154.5` in both the Production and Preview environments so both deployment types build with the same Hugo version.
 
+## Caching and compression defaults
+
+- `_headers` keeps HTML caching conservative so deploy updates remain easy to pick up.
+- the source stylesheet URL stays conservative, while the fingerprinted CSS asset gets long-lived immutable caching.
+- Cloudflare Pages already serves compatible content with Brotli and gzip compression, so no extra compression configuration is required for this site.
+
 ## Manual dashboard steps
 
 1. Create or connect the Cloudflare Pages project to the GitHub repository.
@@ -25,6 +31,7 @@ Set `HUGO_VERSION=0.154.5` in both the Production and Preview environments so bo
 4. Set the production branch to `main`.
 5. Leave preview deployments enabled for all non-production branches.
 6. Add the custom domain later, once DNS access is available.
+7. Keep the cache headers simple unless a concrete performance problem appears.
 
 ## Notes
 
