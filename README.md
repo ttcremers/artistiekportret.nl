@@ -6,18 +6,18 @@ The public site will be built as a lightweight static website with Hugo and depl
 
 ## Local development
 
-Run the Hugo development server from the repository root:
+Run the Hugo development server through Docker from the repository root:
 
 ```powershell
-hugo server
+make dev
 ```
 
 ## Production build
 
-Build the static site from the repository root:
+Build the static site through Docker from the repository root:
 
 ```powershell
-hugo
+make build
 ```
 
 ## Positioning
