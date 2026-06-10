@@ -28,7 +28,8 @@ Cloudflare Pages should use the Hugo preset with these settings:
 - build output directory: `public`
 - production branch: `main`
 - preview deployments: all non-production branches and pull requests
-- environment variable: `HUGO_VERSION` in both Production and Preview
+- environment variable: `HUGO_VERSION=0.154.5` in both Production and Preview
+- local Docker image: `hugomods/hugo:exts-0.154.5`
 
 See [Cloudflare Pages deployment](docs/cloudflare-pages.md) for the manual dashboard steps.
 
