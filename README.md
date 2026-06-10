@@ -44,6 +44,7 @@ The work sits between a photographic session and a painted portrait. The offer i
 - [Vision](docs/vision.md)
 - [Audience](docs/audience.md)
 - [Design direction](docs/design-direction.md)
+- [Foundational design tokens](docs/design-tokens.md)
 - [Content plan](docs/content-plan.md)
 - [Architecture](docs/architecture.md)
 - [Cloudflare Pages deployment](docs/cloudflare-pages.md)
