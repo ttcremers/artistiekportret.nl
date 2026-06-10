@@ -1,0 +1,8 @@
+baseURL = "http://localhost:1313/"
+languageCode = "nl-NL"
+title = "artistiekportret.nl"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = false
