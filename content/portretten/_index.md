@@ -2,4 +2,4 @@
 title = "Portretten"
 +++
 
-{{< placeholder-page text="Hier komt later een gekozen reeks portretten met korte context en genoeg ruimte ertussen." >}}
+Een rustige selectie portretten om dichterbij te komen. Open een beeld om het groter te bekijken.

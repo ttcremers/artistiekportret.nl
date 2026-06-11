@@ -1,0 +1,72 @@
+<section class="gallery-overview" aria-labelledby="gallery-overview-title" data-portrait-gallery>
+  <div class="gallery-overview__intro measure">
+    <p class="kicker"><span class="kicker__dot" aria-hidden="true"></span>Portretreeks</p>
+    <h2 id="gallery-overview-title">Een rustige selectie om dichterbij te komen.</h2>
+    <p>
+      Open een beeld om het groter te bekijken. De selectie blijft voorlopig klein, zodat elk portret ruimte houdt.
+    </p>
+  </div>
+
+  <div class="gallery-grid">
+    {{ range $index, $image := site.Data.portretten.images }}
+      <figure class="gallery-card gallery-card--{{ $image.orientation }}">
+        <button
+          type="button"
+          class="gallery-card__button"
+          data-gallery-item
+          data-gallery-index="{{ $index }}"
+          data-gallery-src="{{ $image.src }}"
+          data-gallery-alt="{{ $image.alt }}"
+          data-gallery-title="{{ $image.title }}"
+          data-gallery-note="{{ $image.note }}"
+          aria-label="Open {{ $image.title }}"
+        >
+          <img
+            class="gallery-card__image"
+            src="{{ $image.src }}"
+            alt="{{ $image.alt }}"
+            width="{{ $image.width }}"
+            height="{{ $image.height }}"
+            loading="{{ if lt $index 2 }}eager{{ else }}lazy{{ end }}"
+            decoding="async"
+          >
+          <span class="gallery-card__meta">
+            <span class="gallery-card__title">{{ $image.title }}</span>
+            <span class="gallery-card__note">{{ $image.note }}</span>
+          </span>
+        </button>
+      </figure>
+    {{ end }}
+  </div>
+
+  <p class="text-small gallery-overview__hint">
+    Klik of tik op een beeld om het groter te openen. Gebruik de pijlen om door de reeks te bladeren.
+  </p>
+</section>
+
+<dialog class="gallery-dialog" data-gallery-dialog aria-label="Vergrote weergave">
+  <div class="gallery-dialog__surface">
+    <div class="gallery-dialog__topbar">
+      <div class="gallery-dialog__meta">
+        <p class="gallery-dialog__title" data-gallery-dialog-title></p>
+        <p class="gallery-dialog__note" data-gallery-dialog-note></p>
+      </div>
+      <button type="button" class="gallery-dialog__close" data-gallery-close>Sluiten</button>
+    </div>
+
+    <div class="gallery-dialog__body">
+      <button type="button" class="gallery-dialog__nav gallery-dialog__nav--prev" data-gallery-prev aria-label="Vorige afbeelding">
+        Vorige
+      </button>
+
+      <figure class="gallery-dialog__figure">
+        <img class="gallery-dialog__image" data-gallery-dialog-image alt="">
+        <figcaption class="gallery-dialog__caption" data-gallery-dialog-caption></figcaption>
+      </figure>
+
+      <button type="button" class="gallery-dialog__nav gallery-dialog__nav--next" data-gallery-next aria-label="Volgende afbeelding">
+        Volgende
+      </button>
+    </div>
+  </div>
+</dialog>
