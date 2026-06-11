@@ -1,0 +1,53 @@
+[[images]]
+title = "Picturaal kindportret"
+note = "Een zachte opening met een schilderachtige toon."
+src = "https://zone.photos/images/phart/zonephotos-photoart-2.jpg"
+alt = "Picturaal portret van een kind"
+width = 1200
+height = 1500
+orientation = "portrait"
+
+[[images]]
+title = "Strak klassiek portret"
+note = "Rust en eenvoud als tegenwicht."
+src = "https://zone.photos/images/phart/zonephotos-photoart-3.jpg"
+alt = "Strak klassiek portret"
+width = 1200
+height = 1500
+orientation = "portrait"
+
+[[images]]
+title = "Panoramisch avondlicht"
+note = "Brede ademruimte voor de reeks."
+src = "https://zone.photos/images/life-in-tone/zonephotos-life-in-tone-10.jpg"
+alt = "Panoramisch portret in warm avondlicht"
+width = 1600
+height = 900
+orientation = "panorama"
+
+[[images]]
+title = "Korrelig zwart-wit"
+note = "Een iets rauwere toon in de reeks."
+src = "https://zone.photos/images/life-in-contrast/zonephotos-life-in-contrast-19.jpg"
+alt = "Korrelig zwart-witportret van een man"
+width = 1200
+height = 1500
+orientation = "portrait"
+
+[[images]]
+title = "Stoelrug"
+note = "Dichterbij, met ruimte in de blik."
+src = "https://zone.photos/images/life-in-contrast/zonephotos-life-in-contrast-9.jpg"
+alt = "Zwart-witportret van een vrouw, half verborgen achter een stoelrug"
+width = 1400
+height = 980
+orientation = "landscape"
+
+[[images]]
+title = "Schilderachtig vlak"
+note = "Een kleine verrassing in de reeks."
+src = "https://zone.photos/images/phart/zonephotos-photoart-8.jpg"
+alt = "Portret dat oplicht uit een schilderachtig vlak"
+width = 1400
+height = 1100
+orientation = "landscape"
