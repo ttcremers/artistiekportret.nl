@@ -8,7 +8,7 @@ The public site uses a compact token layer that keeps the visual direction calm,
 - `--color-surface`: slightly brighter surface panels for cards, nav and callouts
 - `--color-text`: near-black body text
 - `--color-muted`: restrained supporting text and secondary labels
-- `--color-accent`: warm yellow-gold accent for links, emphasis and sparse highlights
+- `--color-accent`: warm yellow-gold accent for links, emphasis and sparse highlights, kept dark enough for accessible text on light surfaces
 - `--color-accent-soft`: soft gold tint for subtle highlights
 - `--color-border`: low-contrast separators and outlines
 - `--color-focus`: clearly visible keyboard focus ring
