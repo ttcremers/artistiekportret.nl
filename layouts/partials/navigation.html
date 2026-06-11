@@ -1,10 +1,10 @@
 <nav class="site-nav" aria-label="Hoofdnavigatie">
   <a href="/" class="site-nav__brand">Theodoor Thomas</a>
   <div class="site-nav__links">
-    <a href="/portretten/">Portretten</a>
-    <a href="/werkwijze/">Werkwijze</a>
-    <a href="/autonoom-werk/">Autonoom werk</a>
-    <a href="/over-mij/">Over mij</a>
-    <a class="site-nav__contact" href="/contact/">Contact</a>
+    <a href="/portretten/"{{ if eq .RelPermalink "/portretten/" }} aria-current="page"{{ end }}>Portretten</a>
+    <a href="/autonoom-werk/"{{ if eq .RelPermalink "/autonoom-werk/" }} aria-current="page"{{ end }}>Autonoom werk</a>
+    <a href="/over-mij/"{{ if eq .RelPermalink "/over-mij/" }} aria-current="page"{{ end }}>Over mij</a>
+    <a href="/werkwijze/"{{ if eq .RelPermalink "/werkwijze/" }} aria-current="page"{{ end }}>Werkwijze</a>
+    <a class="site-nav__contact" href="/contact/"{{ if eq .RelPermalink "/contact/" }} aria-current="page"{{ end }}>Contact</a>
   </div>
 </nav>

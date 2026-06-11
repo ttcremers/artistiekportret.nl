@@ -2,4 +2,4 @@
 title = "Werkwijze"
 +++
 
-{{< placeholder-page text="hier komt later een geruststellende uitleg over het proces, tempo en contact." >}}
+{{< placeholder-page text="Hier komt later een rustige uitleg over het proces, het tempo en hoe het contact verloopt." >}}
