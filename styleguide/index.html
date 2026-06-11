@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Artistiek Portret — homepage prototype</title>
+  <meta name="description" content="Statische visuele prototypepagina voor artistiekportret.nl.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Theodoor Thomas, naar boven">Theodoor Thomas</a>
+    <nav class="main-nav" aria-label="Hoofdnavigatie">
+      <a href="#portretten">Portretten</a>
+      <a href="#autonoom">Autonoom werk</a>
+      <a href="#over-mij">Over mij</a>
+      <a href="#werkwijze">Werkwijze</a>
+      <a class="nav-contact" href="#contact">Contact</a>
+    </nav>
+    <a class="guide-link" href="style-guide.html">Style guide</a>
+  </header>
+
+  <main id="top">
+    <section class="poster-hero" aria-labelledby="hero-title">
+      <div class="poster-rule poster-rule--top" aria-hidden="true"></div>
+      <p class="eyebrow">Artistieke portretfotografie · Den Haag</p>
+
+      <h1 class="poster-title" id="hero-title" aria-label="Artistiek portret">
+        <span class="poster-title__line poster-title__line--art">Artistiek</span>
+        <span class="poster-title__line poster-title__line--portrait">Portret</span>
+      </h1>
+
+      <figure class="hero-portrait">
+        <img
+          src="https://zone.photos/images/phart/zonephotos-photoart-2.jpg"
+          alt="Picturaal portret van een kind met historische verwijzingen"
+          width="1200"
+          height="1500"
+        >
+      </figure>
+
+      <svg class="hero-gesture" viewBox="0 0 440 160" aria-hidden="true">
+        <ellipse cx="220" cy="80" rx="196" ry="54"></ellipse>
+        <ellipse cx="224" cy="77" rx="188" ry="48"></ellipse>
+      </svg>
+
+      <div class="hero-note">
+        <p class="hero-note__lead">Een portret tussen fotografische sessie en schilderachtig werk.</p>
+        <p>Met aandacht, stilte en ruimte voor een beeld dat aan de muur mag blijven leven.</p>
+        <a class="text-action" href="#contact">Verken een portret <span aria-hidden="true">↗</span></a>
+      </div>
+
+      <p class="hero-signature">Theodoor Thomas<br><span>Portretten met gewicht en aanwezigheid</span></p>
+      <p class="hero-index" aria-hidden="true">01 / 04</p>
+      <div class="poster-rule poster-rule--bottom" aria-hidden="true"></div>
+    </section>
+
+    <section class="editorial-intro" id="portretten" aria-labelledby="intro-title">
+      <p class="eyebrow">Geselecteerde portretten</p>
+      <h2 id="intro-title">Niet ieder beeld hoeft luid te zijn om aanwezig te blijven.</h2>
+      <p>De reeks beweegt tussen klassiek en onverwacht, tussen precisie en een kleine afwijking. Geen catalogus. Een zorgvuldig ingerichte kamer.</p>
+    </section>
+
+    <section class="editorial-grid" aria-label="Voorbeeld van editoriale beeldritmiek">
+      <figure class="artwork artwork--strict">
+        <img src="https://zone.photos/images/phart/zonephotos-photoart-3.jpg" alt="Strak klassiek portret" width="1200" height="1500" loading="lazy">
+        <figcaption>Strak tegenbeeld <span>02</span></figcaption>
+      </figure>
+
+      <div class="editorial-fragment">
+        <span class="fragment-mark" aria-hidden="true"></span>
+        <p>Rust is niet hetzelfde als leegte.</p>
+      </div>
+
+      <figure class="artwork artwork--panorama">
+        <img src="https://zone.photos/images/life-in-tone/zonephotos-life-in-tone-10.jpg" alt="Panoramisch portret in warm avondlicht" width="1600" height="900" loading="lazy">
+        <figcaption>Ruimte voor landschap en mens <span>03</span></figcaption>
+      </figure>
+
+      <figure class="artwork artwork--grain">
+        <img src="https://zone.photos/images/life-in-contrast/zonephotos-life-in-contrast-19.jpg" alt="Korrelig zwart-witportret van een man" width="1200" height="1500" loading="lazy">
+        <figcaption>Ruw contrast <span>04</span></figcaption>
+      </figure>
+
+      <div class="editorial-quote">
+        <p>“Het portret hoeft niet uit te leggen wie je bent. Het mag iets achterlaten.”</p>
+      </div>
+
+      <figure class="artwork artwork--chair">
+        <img src="https://zone.photos/images/life-in-contrast/zonephotos-life-in-contrast-9.jpg" alt="Zwart-witportret van een vrouw, half verborgen achter een stoelrug" width="1400" height="980" loading="lazy">
+        <figcaption>Intimiteit zonder drama <span>05</span></figcaption>
+      </figure>
+
+      <figure class="artwork artwork--rupture">
+        <img src="https://zone.photos/images/phart/zonephotos-photoart-8.jpg" alt="Portret dat tevoorschijn komt uit een schilderachtig vlak" width="1400" height="1100" loading="lazy">
+        <figcaption>Een kleine afwijking <span>06</span></figcaption>
+      </figure>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <p class="eyebrow">Contact</p>
+      <h2 id="contact-title">Een portret begint met een rustig gesprek.</h2>
+      <p>Vertel iets over jezelf, of over het beeld dat je zoekt. Een eerste bericht is genoeg.</p>
+      <a class="text-action text-action--large" href="mailto:hello@example.com">Neem contact op <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Theodoor Thomas · Artistieke portretfotografie in Den Haag</span>
+    <a href="style-guide.html">Bekijk het style guide</a>
+  </footer>
+</body>
+</html>
