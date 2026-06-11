@@ -17,11 +17,22 @@ Use these references as a direction of travel rather than as a costume box:
 - **Paolo Roversi** for photographic painterliness and softness
 - **Teun Hocks** for a subtle undercurrent of estrangement and gentle absurdity
 
+Editorial-gallery additions:
+
+- **IGNANT** for editorial rhythm, varied image scales, deliberate pauses, asymmetry and image-led composition
+- **Space Copenhagen** for warm richness, background colour, typography and tactile calm
+- **White Cube** for art-gallery authority and confidence in presenting work as work
+- **Shibui** for wabi-sabi restraint and the discipline to remove unnecessary interface elements
+- **Gallery Hugo theme** for portfolio browsing behaviour and quiet image-opening transitions
+- **Nona Inescu** and **Bridget** for one authored or slightly unexpected gesture, while keeping the visitor oriented
+- **Kyle McDougall** for breathing room and deliberate visual silence, but not for an almost-empty commercial landing page
+
 ## Visual principles
 
 - warm off-white backgrounds rather than bright digital white
 - near-black or dark grey text
 - restrained muted accents such as olive, slate or rust
+- a bright, warm yellow-gold accent used sparingly, like a patch of late afternoon sunlight rather than luxury-brand gold
 - elegant serif headings
 - practical sans-serif body text
 - generous whitespace
