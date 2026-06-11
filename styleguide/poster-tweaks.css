@@ -1,0 +1,175 @@
+.site-header--prototype {
+  grid-template-columns: 1fr auto;
+}
+
+.site-header--prototype .main-nav {
+  justify-content: center;
+}
+
+.poster-hero {
+  min-height: clamp(52rem, 88vh, 68rem);
+}
+
+.poster-title--wrapped {
+  top: clamp(8rem, 10vw, 9.5rem);
+  left: var(--page-pad);
+  max-width: 5.2ch;
+  font-size: clamp(7.8rem, 15vw, 16rem);
+  line-height: 0.66;
+}
+
+.poster-title__word {
+  display: block;
+  width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.poster-title__word--portret {
+  margin-top: 0.12em;
+  margin-left: 0.72em;
+}
+
+.hero-portrait {
+  position: absolute;
+  right: clamp(17rem, 28vw, 30rem);
+  bottom: clamp(2.5rem, 4vw, 4.5rem);
+  width: min(43vw, 42rem);
+  max-width: none;
+  margin: 0;
+}
+
+.hero-gesture {
+  top: clamp(15rem, 19vw, 18.5rem);
+  right: clamp(1.5rem, 4vw, 5.5rem);
+  width: min(29vw, 27rem);
+}
+
+.hero-gesture-label {
+  position: absolute;
+  top: clamp(18.25rem, 22.2vw, 22rem);
+  right: clamp(8rem, 11vw, 12rem);
+  z-index: 3;
+  margin: 0;
+  color: var(--gold-dark);
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.hero-note {
+  grid-column: auto;
+  grid-row: auto;
+  position: absolute;
+  top: clamp(25rem, 32vw, 31rem);
+  right: var(--page-pad);
+  width: min(23rem, 24vw);
+}
+
+.hero-signature {
+  position: absolute;
+  left: var(--page-pad);
+  bottom: clamp(2.5rem, 4vw, 4rem);
+}
+
+.hero-index {
+  position: absolute;
+  right: var(--page-pad);
+  bottom: clamp(2.5rem, 4vw, 4rem);
+}
+
+@media (max-width: 70rem) {
+  .poster-title--wrapped {
+    max-width: 5.4ch;
+    font-size: clamp(7rem, 14vw, 13rem);
+  }
+
+  .hero-portrait {
+    right: 12rem;
+    width: min(47vw, 36rem);
+  }
+
+  .hero-note {
+    top: 31rem;
+    right: 1.5rem;
+    width: 16rem;
+  }
+
+  .hero-gesture {
+    top: 17rem;
+    right: -1.25rem;
+    width: 24rem;
+  }
+
+  .hero-gesture-label {
+    top: 20.2rem;
+    right: 4.75rem;
+  }
+}
+
+@media (max-width: 52rem) {
+  .site-header--prototype {
+    grid-template-columns: 1fr;
+  }
+
+  .site-header--prototype .main-nav {
+    justify-content: flex-start;
+  }
+
+  .site-header--prototype .guide-link {
+    justify-self: start;
+  }
+
+  .poster-hero {
+    min-height: auto;
+  }
+
+  .poster-title--wrapped {
+    position: relative;
+    inset: auto;
+    max-width: 5.2ch;
+    margin-top: 2rem;
+    font-size: clamp(6.4rem, 25vw, 10rem);
+  }
+
+  .hero-portrait {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: min(94%, 34rem);
+    margin: -0.6rem auto 0;
+  }
+
+  .hero-gesture {
+    top: 21.5rem;
+    right: -5rem;
+    width: 22rem;
+  }
+
+  .hero-gesture-label {
+    top: 24.6rem;
+    right: 0.8rem;
+  }
+
+  .hero-note,
+  .hero-signature,
+  .hero-index {
+    position: static;
+  }
+
+  .hero-note {
+    width: auto;
+    max-width: 34rem;
+    margin-top: var(--space-5);
+  }
+
+  .hero-signature,
+  .hero-index {
+    margin-top: var(--space-5);
+  }
+
+  .hero-index {
+    text-align: right;
+  }
+}
