@@ -27,7 +27,7 @@ Dat is prima.
 
 Een eerste bericht per e-mail is genoeg. Daarna kijken we rustig of mijn manier van werken bij je past en wat een logische vervolgstap kan zijn.
 
-**E-mail:** [contact@artistiekportret.nl](mailto:contact@artistiekportret.nl)
+Het definitieve contactadres voegen we toe zodra dat is gekozen.
 
 [Lees meer over mijn werkwijze](/werkwijze/)  
 [Ga terug naar de portretten](/portretten/)
