@@ -9,9 +9,9 @@
 .poster-hero {
   display: grid;
   grid-template-columns: minmax(12rem, 0.82fr) minmax(34rem, 1.36fr) minmax(18rem, 0.78fr);
-  grid-template-rows: auto minmax(0, 1fr) auto;
+  grid-template-rows: auto auto 1fr;
   column-gap: clamp(3rem, 4vw, 5.25rem);
-  row-gap: clamp(2rem, 3vw, 3.5rem);
+  row-gap: 0;
   min-height: clamp(64rem, 96vh, 78rem);
 }
 
@@ -19,10 +19,10 @@
   position: static;
   grid-column: 1;
   grid-row: 2;
-  align-self: center;
+  align-self: start;
   justify-self: end;
   max-width: 4.15ch;
-  margin: 0;
+  margin: clamp(3rem, 5vw, 5rem) 0 0;
   padding-right: clamp(0.75rem, 1.5vw, 1.5rem);
   font-size: clamp(5rem, 7.4vw, 8.6rem);
   line-height: 0.76;
@@ -40,11 +40,11 @@
   position: static;
   grid-column: 2;
   grid-row: 2 / 4;
-  align-self: end;
+  align-self: start;
   justify-self: stretch;
   width: min(100%, 48rem);
   max-width: none;
-  margin: 0;
+  margin: clamp(3rem, 5vw, 5rem) 0 0;
 }
 
 .hero-note {
@@ -52,9 +52,10 @@
   z-index: 2;
   grid-column: 3;
   grid-row: 2;
-  align-self: center;
+  align-self: start;
   width: auto;
   max-width: 24rem;
+  margin-top: clamp(3rem, 5vw, 5rem);
   padding-top: var(--space-4);
 }
 
@@ -82,7 +83,7 @@
   grid-column: 1;
   grid-row: 3;
   align-self: end;
-  margin-top: 1.5rem;
+  margin-top: 2.5rem;
 }
 
 .hero-index {
@@ -91,6 +92,7 @@
   grid-row: 3;
   align-self: end;
   justify-self: end;
+  margin-top: 2.5rem;
 }
 
 @media (max-width: 78rem) {
@@ -102,16 +104,19 @@
 
   .poster-title--wrapped {
     max-width: 4ch;
+    margin-top: clamp(2.5rem, 4vw, 4rem);
     padding-right: 0.9rem;
     font-size: clamp(4.5rem, 6.5vw, 6.8rem);
   }
 
   .hero-portrait {
     width: min(100%, 44rem);
+    margin-top: clamp(2.5rem, 4vw, 4rem);
   }
 
   .hero-note {
     max-width: 18rem;
+    margin-top: clamp(2.5rem, 4vw, 4rem);
   }
 
   .hero-gesture {
@@ -136,6 +141,7 @@
     align-self: start;
     justify-self: end;
     max-width: 3.9ch;
+    margin-top: 2rem;
     padding-right: 0.75rem;
     font-size: clamp(4.25rem, 7vw, 6.15rem);
   }
@@ -144,6 +150,7 @@
     grid-column: 2;
     grid-row: 2 / 4;
     width: min(100%, 42rem);
+    margin-top: 2rem;
   }
 
   .hero-note {
@@ -151,6 +158,7 @@
     grid-row: 3;
     align-self: start;
     max-width: 18rem;
+    margin-top: 0;
   }
 
   .hero-signature {
@@ -162,6 +170,7 @@
   .hero-index {
     grid-column: 2;
     grid-row: 4;
+    margin-top: 0;
   }
 
   .hero-gesture {
