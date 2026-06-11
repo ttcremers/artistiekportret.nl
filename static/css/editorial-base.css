@@ -1,0 +1,114 @@
+:root {
+  --color-bg: #e8e5d8;
+  --color-surface: #f3f0e7;
+  --color-text: #181816;
+  --color-muted: #4d4b45;
+  --color-accent: #7f5f18;
+  --color-accent-soft: #b58b4a;
+  --color-border: rgba(24, 24, 22, 0.28);
+  --color-focus: #7f5f18;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Manrope", "Helvetica Neue", Arial, sans-serif;
+  --content-width: 96rem;
+  --content-width-wide: 96rem;
+}
+
+body > #site {
+  width: min(100%, var(--content-width));
+  padding: 0 clamp(1.15rem, 3vw, 3.25rem);
+}
+
+.site-nav {
+  justify-content: center;
+  min-height: 5.25rem;
+  margin-bottom: 0;
+  padding: 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-nav__brand {
+  display: none;
+}
+
+.site-nav__links {
+  justify-content: center;
+  gap: clamp(0.9rem, 2vw, 2rem);
+}
+
+.site-nav a {
+  position: relative;
+  color: var(--color-muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.site-nav a::after {
+  position: absolute;
+  right: 0;
+  bottom: -0.35rem;
+  left: 0;
+  height: 1px;
+  content: "";
+  background: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 180ms ease;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible,
+.site-nav a[aria-current="page"] {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.site-nav a:hover::after,
+.site-nav a:focus-visible::after,
+.site-nav a[aria-current="page"]::after {
+  transform: scaleX(1);
+}
+
+main {
+  max-width: none;
+}
+
+.homepage {
+  display: block;
+}
+
+.eyebrow,
+.kicker {
+  margin: 0;
+  color: var(--color-accent);
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.text-action {
+  display: inline-flex;
+  gap: 0.4rem;
+  align-items: center;
+  color: var(--color-accent);
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.text-action::after {
+  width: 2.5rem;
+  height: 1px;
+  content: "";
+  background: currentColor;
+  transition: width 180ms ease;
+}
+
+.text-action:hover::after,
+.text-action:focus-visible::after {
+  width: 4rem;
+}
