@@ -8,10 +8,11 @@
 
 .poster-hero {
   display: grid;
-  grid-template-columns: minmax(12rem, 0.95fr) minmax(28rem, 1.25fr) minmax(18rem, 0.8fr);
-  grid-template-rows: auto 1fr auto;
-  gap: clamp(1.5rem, 2.5vw, 3rem);
-  min-height: clamp(58rem, 92vh, 74rem);
+  grid-template-columns: minmax(12rem, 0.82fr) minmax(34rem, 1.36fr) minmax(18rem, 0.78fr);
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  column-gap: clamp(3rem, 4vw, 5.25rem);
+  row-gap: clamp(2rem, 3vw, 3.5rem);
+  min-height: clamp(64rem, 96vh, 78rem);
 }
 
 .poster-title--wrapped {
@@ -19,10 +20,12 @@
   grid-column: 1;
   grid-row: 2;
   align-self: center;
-  max-width: 4.4ch;
+  justify-self: end;
+  max-width: 4.15ch;
   margin: 0;
-  font-size: clamp(5.2rem, 8vw, 9rem);
-  line-height: 0.72;
+  padding-right: clamp(0.75rem, 1.5vw, 1.5rem);
+  font-size: clamp(5rem, 7.4vw, 8.6rem);
+  line-height: 0.76;
 }
 
 .poster-title__word {
@@ -30,7 +33,7 @@
 }
 
 .poster-title__word--portrait-start {
-  margin-top: 0.2em;
+  margin-top: 0.22em;
 }
 
 .hero-portrait {
@@ -39,7 +42,7 @@
   grid-row: 2 / 4;
   align-self: end;
   justify-self: stretch;
-  width: min(100%, 42rem);
+  width: min(100%, 48rem);
   max-width: none;
   margin: 0;
 }
@@ -62,10 +65,10 @@
 
 .hero-gesture {
   position: absolute;
-  top: -3.2rem;
-  right: -1.5rem;
+  top: -3rem;
+  right: -2rem;
   z-index: 1;
-  width: min(28vw, 25rem);
+  width: min(30vw, 26rem);
   max-width: none;
   pointer-events: none;
 }
@@ -75,6 +78,7 @@
   grid-column: 1;
   grid-row: 3;
   align-self: end;
+  margin-top: 1.5rem;
 }
 
 .hero-index {
@@ -87,16 +91,19 @@
 
 @media (max-width: 78rem) {
   .poster-hero {
-    grid-template-columns: minmax(10rem, 0.8fr) minmax(24rem, 1.2fr) minmax(15rem, 0.75fr);
-    min-height: 68rem;
+    grid-template-columns: minmax(11rem, 0.74fr) minmax(29rem, 1.28fr) minmax(16rem, 0.72fr);
+    column-gap: clamp(2.25rem, 3vw, 3.5rem);
+    min-height: 72rem;
   }
 
   .poster-title--wrapped {
-    font-size: clamp(4.7rem, 7vw, 7.2rem);
+    max-width: 4ch;
+    padding-right: 0.9rem;
+    font-size: clamp(4.5rem, 6.5vw, 6.8rem);
   }
 
   .hero-portrait {
-    width: min(100%, 39rem);
+    width: min(100%, 44rem);
   }
 
   .hero-note {
@@ -104,16 +111,18 @@
   }
 
   .hero-gesture {
-    top: -2.5rem;
-    right: -3.5rem;
+    top: -2.4rem;
+    right: -2.5rem;
     width: 22rem;
   }
 }
 
 @media (max-width: 64rem) {
   .poster-hero {
-    grid-template-columns: minmax(10rem, 0.72fr) minmax(22rem, 1.2fr);
+    grid-template-columns: minmax(11rem, 0.68fr) minmax(27rem, 1.32fr);
     grid-template-rows: auto auto auto auto;
+    column-gap: 2.5rem;
+    row-gap: 2.5rem;
     min-height: auto;
   }
 
@@ -121,13 +130,16 @@
     grid-column: 1;
     grid-row: 2;
     align-self: start;
-    font-size: clamp(4.5rem, 8vw, 6.8rem);
+    justify-self: end;
+    max-width: 3.9ch;
+    padding-right: 0.75rem;
+    font-size: clamp(4.25rem, 7vw, 6.15rem);
   }
 
   .hero-portrait {
     grid-column: 2;
     grid-row: 2 / 4;
-    width: min(100%, 36rem);
+    width: min(100%, 42rem);
   }
 
   .hero-note {
@@ -140,6 +152,7 @@
   .hero-signature {
     grid-column: 1;
     grid-row: 4;
+    margin-top: 0;
   }
 
   .hero-index {
@@ -148,9 +161,9 @@
   }
 
   .hero-gesture {
-    top: -2.6rem;
-    right: -2rem;
-    width: 20rem;
+    top: -2.25rem;
+    right: -1.75rem;
+    width: 19rem;
   }
 }
 
@@ -173,14 +186,16 @@
   }
 
   .poster-title--wrapped {
-    max-width: 4.5ch;
+    max-width: 4.45ch;
     margin-top: 2rem;
-    font-size: clamp(5rem, 18vw, 7.8rem);
+    padding-right: 0;
+    font-size: clamp(4.7rem, 17vw, 7.2rem);
+    line-height: 0.78;
   }
 
   .hero-portrait {
-    width: min(100%, 37rem);
-    margin-top: 1.25rem;
+    width: min(100%, 38rem);
+    margin-top: 3.25rem;
   }
 
   .hero-note {
@@ -189,9 +204,7 @@
   }
 
   .hero-gesture {
-    top: -2.2rem;
-    right: -1rem;
-    width: 18rem;
+    display: none;
   }
 
   .hero-signature,
