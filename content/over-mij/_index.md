@@ -2,4 +2,4 @@
 title = "Over mij"
 +++
 
-{{< placeholder-page text="hier komt later een transparante introductie van Theodoor Thomas." >}}
+{{< placeholder-page text="Hier komt later een transparante introductie van Theodoor Thomas en de naam waaronder hij werkt." >}}
