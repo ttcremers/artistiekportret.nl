@@ -15,14 +15,10 @@
   transform: translateY(0);
 }
 
-.gallery-dialog__close,
-.gallery-dialog__nav {
-  min-height: 2.75rem;
-  padding: 0.55rem 0.75rem;
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .skip-link {
+  .skip-link,
+  .gallery-dialog__close,
+  .gallery-dialog__nav {
     transition: none;
   }
 }
