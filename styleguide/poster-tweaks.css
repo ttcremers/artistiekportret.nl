@@ -175,8 +175,8 @@
     max-width: none;
     margin: 2rem 0 0;
     padding-right: 0;
-    font-size: clamp(1.25rem, 7vw, 2.1rem);
-    line-height: 0.9;
+    font-size: clamp(1.875rem, 10.5vw, 3.15rem);
+    line-height: 0.88;
     text-align: right;
   }
 
