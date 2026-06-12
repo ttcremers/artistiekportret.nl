@@ -1,0 +1,38 @@
+{{- $canonicalBase := strings.TrimSuffix "/" site.Params.canonicalBaseURL -}}
+{{- $canonicalURL := printf "%s%s" $canonicalBase .RelPermalink -}}
+{{- $description := .Description | default site.Params.defaultDescription -}}
+{{- $socialImageAlt := .Params.socialImageAlt | default site.Params.defaultSocialImageAlt -}}
+{{- $socialImage := .Params.socialImage -}}
+{{- if not $socialImage -}}
+  {{- with resources.Get site.Params.defaultSocialImageSource -}}
+    {{- $socialImage = .Permalink -}}
+  {{- else -}}
+    {{- errorf "missing default social image asset %q" site.Params.defaultSocialImageSource -}}
+  {{- end -}}
+{{- end -}}
+{{- $title := .Title -}}
+{{- if not .IsHome -}}
+  {{- $title = printf "%s | %s" .Title site.Title -}}
+{{- end -}}
+
+<title>{{ $title }}</title>
+<meta name="description" content="{{ $description }}">
+<link rel="canonical" href="{{ $canonicalURL }}">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+<meta property="og:locale" content="nl_NL">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $description }}">
+<meta property="og:url" content="{{ $canonicalURL }}">
+<meta property="og:image" content="{{ $socialImage }}">
+<meta property="og:image:alt" content="{{ $socialImageAlt }}">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $description }}">
+<meta name="twitter:image" content="{{ $socialImage }}">
+<meta name="twitter:image:alt" content="{{ $socialImageAlt }}">
+
+{{ partial "structured-data.html" . }}
