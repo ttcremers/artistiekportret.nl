@@ -9,15 +9,25 @@
 {{- $decoding := .decoding | default "async" -}}
 {{- $imgClass := .imgClass -}}
 {{- $fetchpriority := .fetchpriority -}}
-{{- $jpgSrcset := slice -}}
-{{- $webpSrcset := slice -}}
+{{- $candidateWidths := slice -}}
 {{- range $widths -}}
   {{- if le . $resource.Width -}}
-    {{- $jpg := $resource.Resize (printf "%dx" .) -}}
-    {{- $webp := $resource.Process (printf "resize %dx webp" .) -}}
-    {{- $jpgSrcset = $jpgSrcset | append (printf "%s %dw" $jpg.RelPermalink $jpg.Width) -}}
-    {{- $webpSrcset = $webpSrcset | append (printf "%s %dw" $webp.RelPermalink $webp.Width) -}}
+    {{- $candidateWidths = $candidateWidths | append . -}}
   {{- end -}}
+{{- end -}}
+{{- if not (in $candidateWidths $resource.Width) -}}
+  {{- $candidateWidths = $candidateWidths | append $resource.Width -}}
+{{- end -}}
+{{- $jpgSrcset := slice -}}
+{{- $webpSrcset := slice -}}
+{{- range $candidateWidths -}}
+  {{- $jpg := $resource -}}
+  {{- if ne . $resource.Width -}}
+    {{- $jpg = $resource.Resize (printf "%dx" .) -}}
+  {{- end -}}
+  {{- $webp := $resource.Process (printf "resize %dx webp" .) -}}
+  {{- $jpgSrcset = $jpgSrcset | append (printf "%s %dw" $jpg.RelPermalink $jpg.Width) -}}
+  {{- $webpSrcset = $webpSrcset | append (printf "%s %dw" $webp.RelPermalink $webp.Width) -}}
 {{- end -}}
 <picture class="portrait-picture">
   {{- if gt (len $webpSrcset) 0 -}}
