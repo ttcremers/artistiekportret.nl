@@ -170,11 +170,33 @@
   .poster-title--wrapped {
     position: static;
     inset: auto;
-    max-width: 4.45ch;
-    margin-top: 2rem;
+    display: block;
+    width: 100%;
+    max-width: none;
+    margin: 2rem 0 0;
     padding-right: 0;
-    font-size: clamp(4.7rem, 17vw, 7.2rem);
-    line-height: 0.78;
+    font-size: clamp(1.25rem, 7vw, 2.1rem);
+    line-height: 0.9;
+    text-align: right;
+  }
+
+  .poster-title--wrapped::before,
+  .poster-title--wrapped::after {
+    display: block;
+    color: inherit;
+  }
+
+  .poster-title--wrapped::before {
+    content: "Artistiek";
+  }
+
+  .poster-title--wrapped::after {
+    content: "Portret";
+    margin-top: 0.08em;
+  }
+
+  .poster-title__word {
+    display: none;
   }
 
   .hero-portrait {
@@ -185,6 +207,10 @@
   .hero-note {
     max-width: 34rem;
     margin-top: var(--space-6);
+  }
+
+  .poster-title__word--portrait-start {
+    margin-top: 0.08em;
   }
 
   .hero-signature,
