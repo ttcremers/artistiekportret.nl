@@ -24,7 +24,8 @@ make build
 
 Cloudflare Pages should use the Hugo preset with these settings:
 
-- build command: `hugo -b ${PUBLIC_BASE_URL:-$CF_PAGES_URL}`
+- preview build command: `hugo -b $CF_PAGES_URL`
+- production build command: `hugo -b $PUBLIC_BASE_URL`
 - build output directory: `public`
 - production branch: `main`
 - preview deployments: all non-production branches and pull requests
@@ -50,6 +51,7 @@ The work sits between a photographic session and a painted portrait. The offer i
 - [Content plan](docs/content-plan.md)
 - [Architecture](docs/architecture.md)
 - [Cloudflare Pages deployment](docs/cloudflare-pages.md)
+- [Domain cutover operator checklist](docs/domain-cutover.md)
 - [Google Search Console launch notes](docs/search-console.md)
 - [Roadmap](docs/roadmap.md)
 
