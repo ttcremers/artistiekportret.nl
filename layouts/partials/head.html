@@ -12,3 +12,5 @@
 <link rel="stylesheet" href="{{ $poster.RelPermalink }}" integrity="{{ $poster.Data.Integrity }}" crossorigin="anonymous">
 {{ $adapter := readFile "static/css/editorial-base.css" | resources.FromString "css/editorial-base.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $adapter.RelPermalink }}" integrity="{{ $adapter.Data.Integrity }}" crossorigin="anonymous">
+{{ $a11y := readFile "static/css/a11y-hardening.css" | resources.FromString "css/a11y-hardening.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $a11y.RelPermalink }}" integrity="{{ $a11y.Data.Integrity }}" crossorigin="anonymous">
