@@ -4,16 +4,33 @@
 
 Use the Cloudflare Pages Hugo preset with:
 
-- build command: `hugo -b $CF_PAGES_URL`
 - build output directory: `public`
 - environment variable: `HUGO_VERSION=0.154.5`
+
+Use this build command for preview deployments:
+
+```text
+hugo -b $CF_PAGES_URL
+```
+
+Use this build command for the production deployment:
+
+```text
+hugo -b $PUBLIC_BASE_URL
+```
+
+Set this variable only in the Production environment:
+
+```text
+PUBLIC_BASE_URL=https://artistiekportret.nl/
+```
+
+The public base URL matters because Hugo uses it when generating absolute URLs in `sitemap.xml`.
 
 ## Branch behavior
 
 - production branch: `main`
 - preview deployments: enabled for all non-production branches and pull requests
-
-Cloudflare Pages uses branch deployment controls to manage production and preview deployments. The default setup is to deploy every commit to the production branch and to create preview deployments for other branches.
 
 Set `HUGO_VERSION=0.154.5` in both the Production and Preview environments so both deployment types build with the same Hugo version.
 
@@ -26,14 +43,14 @@ Set `HUGO_VERSION=0.154.5` in both the Production and Preview environments so bo
 ## Manual dashboard steps
 
 1. Create or connect the Cloudflare Pages project to the GitHub repository.
-2. Select the Hugo preset, or set the build command to `hugo -b $CF_PAGES_URL` and the output directory to `public`.
-3. Set `HUGO_VERSION=0.154.5` in both the Production and Preview environment variables.
-4. Set the production branch to `main`.
-5. Leave preview deployments enabled for all non-production branches.
-6. Add the custom domain later, once DNS access is available.
-7. Keep the cache headers simple unless a concrete performance problem appears.
+2. Set the preview build command to `hugo -b $CF_PAGES_URL`.
+3. Set the production build command to `hugo -b $PUBLIC_BASE_URL`.
+4. Set `HUGO_VERSION=0.154.5` in both environments.
+5. Set `PUBLIC_BASE_URL=https://artistiekportret.nl/` only in Production.
+6. Set the production branch to `main`.
+7. Leave preview deployments enabled for all non-production branches.
+8. Add the custom domain later, once DNS access is available.
 
-## Notes
+## Search discovery
 
-- No extra repository-specific build script is required for the current setup.
-- If Cloudflare Pages settings ever need to vary by branch, use the dashboard branch deployment controls rather than hard-coding environment-specific behavior into the repository.
+After the custom domain is live, follow [Google Search Console launch notes](search-console.md).
