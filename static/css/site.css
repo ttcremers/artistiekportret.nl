@@ -180,6 +180,31 @@ small,
   gap: var(--space-8);
 }
 
+.page-shell .intro.measure > :where(h1, h2, h3, h4) {
+  margin-block: 0;
+}
+
+.page-shell .intro.measure > h1 {
+  margin-bottom: clamp(0.35rem, 0.8vw, 0.75rem);
+}
+
+.page-shell .intro.measure > :where(h2, h3, h4) {
+  margin-top: clamp(2.25rem, 4.5vw, 3.75rem);
+  margin-bottom: clamp(0.45rem, 1vw, 0.8rem);
+}
+
+.page-shell .intro.measure > :where(p, ul, ol, blockquote, figure) {
+  margin-bottom: clamp(0.9rem, 1.4vw, 1.2rem);
+}
+
+.page-shell .intro.measure > :where(h1, h2, h3, h4) + :where(p, ul, ol, blockquote, figure) {
+  margin-top: 0;
+}
+
+.page-shell .intro.measure > :where(p, ul, ol, blockquote, figure) + :where(h2, h3, h4) {
+  margin-top: clamp(2.25rem, 4.5vw, 3.75rem);
+}
+
 .placeholder-page {
   display: grid;
   gap: var(--space-3);
@@ -379,7 +404,7 @@ input[type="submit"]:hover {
   border: 0;
   padding: 0;
   background: transparent;
-  color: var(--color-text);
+  color: var(--color-surface);
 }
 
 .gallery-dialog::backdrop {
@@ -401,21 +426,38 @@ input[type="submit"]:hover {
 
 .gallery-dialog__title {
   margin: 0;
-  color: var(--color-text);
+  color: var(--color-surface);
   font-family: var(--font-serif);
   font-size: 1.1rem;
   line-height: var(--line-height-tight);
+  text-shadow: 0 1px 2px rgba(23, 19, 17, 0.55);
 }
 
 .gallery-dialog__close,
 .gallery-dialog__nav {
-  min-height: 0;
-  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.55rem 0.9rem;
   border: 0;
   border-radius: 0;
-  background: transparent;
-  color: var(--color-text);
+  background: rgba(23, 19, 17, 0.22);
+  color: var(--color-surface);
   font: inherit;
+  transition: background-color 180ms ease, color 180ms ease, opacity 180ms ease;
+}
+
+.gallery-dialog__close:hover,
+.gallery-dialog__nav:hover {
+  background: rgba(23, 19, 17, 0.38);
+  color: var(--color-surface);
+}
+
+.gallery-dialog__close:focus-visible,
+.gallery-dialog__nav:focus-visible {
+  outline-color: var(--color-surface);
+  outline-offset: 2px;
 }
 
 .gallery-dialog__body {
