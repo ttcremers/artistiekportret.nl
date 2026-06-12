@@ -2,6 +2,13 @@ baseURL = "http://localhost:1313/"
 languageCode = "nl-NL"
 title = "artistiekportret.nl"
 
+[params]
+  canonicalBaseURL = "https://artistiekportret.nl"
+  defaultDescription = "Artistieke portretten in Den Haag, gemaakt met rust en aandacht. Voor mensen die zoeken naar een persoonlijk beeld tussen fotografie en schilderachtig werk."
+  defaultSocialImageSource = "images/portretten/source/picturaal-kindportret.jpg"
+  defaultSocialImageAlt = "Picturaal portret met historische verwijzingen"
+  artistName = "Theodoor Thomas"
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]

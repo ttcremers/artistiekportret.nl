@@ -1,0 +1,14 @@
+{{- $canonicalBase := strings.TrimSuffix "/" site.Params.canonicalBaseURL -}}
+{{- $homeURL := printf "%s/" $canonicalBase -}}
+{{- $aboutURL := printf "%s/over-mij/" $canonicalBase -}}
+{{- $websiteID := printf "%s#website" $homeURL -}}
+{{- $artistID := printf "%s#artist" $homeURL -}}
+{{- $profileID := printf "%s#profile-page" $aboutURL -}}
+{{- $graph := slice
+  (dict "@type" "WebSite" "@id" $websiteID "url" $homeURL "name" site.Title "description" site.Params.defaultDescription "inLanguage" "nl-NL")
+  (dict "@type" "Person" "@id" $artistID "name" site.Params.artistName "url" $aboutURL)
+-}}
+{{- if eq .RelPermalink "/over-mij/" -}}
+  {{- $graph = $graph | append (dict "@type" "ProfilePage" "@id" $profileID "url" $aboutURL "name" "Over Theodoor Thomas" "mainEntity" (dict "@id" $artistID) "isPartOf" (dict "@id" $websiteID)) -}}
+{{- end -}}
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@graph" $graph | jsonify | safeHTML }}</script>
