@@ -27,7 +27,7 @@
     dialogImage.src = button.dataset.gallerySrc || image?.currentSrc || image?.src || '';
     if (image?.srcset) {
       dialogImage.srcset = image.srcset;
-      dialogImage.sizes = 'min(90vw, 80rem)';
+      dialogImage.sizes = '(min-width: 89rem) 80rem, 90vw';
     } else {
       dialogImage.removeAttribute('srcset');
       dialogImage.removeAttribute('sizes');
