@@ -42,6 +42,7 @@ The work sits between a photographic session and a painted portrait. The offer i
 
 ## Project documentation
 
+- [Current project direction](docs/current-project-direction.md)
 - [Vision](docs/vision.md)
 - [Audience](docs/audience.md)
 - [Design direction](docs/design-direction.md)
@@ -54,4 +55,4 @@ The work sits between a photographic session and a painted portrait. The offer i
 
 ## Working method
 
-Read [`AGENTS.md`](AGENTS.md) before making changes. Work in small, reviewable pull requests. Keep the public site simple until a real need justifies additional complexity.
+Read [`AGENTS.md`](AGENTS.md) and [Current project direction](docs/current-project-direction.md) before making changes. Work in small, reviewable pull requests. Keep the public site simple until a real need justifies additional complexity.
