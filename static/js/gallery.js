@@ -10,7 +10,7 @@
   const prevButton = dialog?.querySelector('[data-gallery-prev]');
   const nextButton = dialog?.querySelector('[data-gallery-next]');
 
-  if (!dialog || !dialogImage || !dialogTitle || !closeButton || !prevButton || !nextButton) {
+  if (!items.length || !dialog || !dialogImage || !dialogTitle || !closeButton || !prevButton || !nextButton) {
     return;
   }
 
@@ -32,7 +32,7 @@
       dialogImage.removeAttribute('srcset');
       dialogImage.removeAttribute('sizes');
     }
-    dialogImage.alt = image?.getAttribute('alt') || '';
+    dialogImage.alt = button.dataset.galleryAlt || image?.getAttribute('alt') || '';
     dialogImage.width = image?.getAttribute('width') || '';
     dialogImage.height = image?.getAttribute('height') || '';
     dialogTitle.textContent = button.dataset.galleryTitle || '';
@@ -66,6 +66,7 @@
   dialog.addEventListener('close', () => {
     if (opener) {
       opener.focus({ preventScroll: true });
+      opener = null;
     }
   });
 
