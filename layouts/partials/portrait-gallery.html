@@ -9,31 +9,42 @@
 
   <div class="gallery-grid">
     {{ range $index, $image := site.Data.portretten.images }}
-      <figure class="gallery-card gallery-card--{{ $image.orientation }}">
-        <button
-          type="button"
-          class="gallery-card__button"
-          data-gallery-item
-          data-gallery-index="{{ $index }}"
-          data-gallery-src="{{ $image.src }}"
-          data-gallery-alt="{{ $image.alt }}"
-          data-gallery-title="{{ $image.title }}"
-          aria-label="Open {{ $image.title }}"
-        >
-          <img
-            class="gallery-card__image"
-            src="{{ $image.src }}"
-            alt="{{ $image.alt }}"
-            width="{{ $image.width }}"
-            height="{{ $image.height }}"
-            loading="{{ if lt $index 2 }}eager{{ else }}lazy{{ end }}"
-            decoding="async"
+      {{ with resources.Get $image.source }}
+        {{ $loading := "lazy" -}}
+        {{ if lt $index 2 }}{{ $loading = "eager" }}{{ end -}}
+        {{ $sizes := "(min-width: 64rem) 20rem, (min-width: 48rem) 32vw, 100vw" -}}
+        {{ if eq $image.orientation "landscape" }}
+          {{ $sizes = "(min-width: 64rem) 38rem, (min-width: 48rem) 48vw, 100vw" -}}
+        {{ else if eq $image.orientation "panorama" }}
+          {{ $sizes = "100vw" -}}
+        {{ end }}
+        <figure class="gallery-card gallery-card--{{ $image.orientation }}">
+          <button
+            type="button"
+            class="gallery-card__button"
+            data-gallery-item
+            data-gallery-index="{{ $index }}"
+            data-gallery-src="{{ .RelPermalink }}"
+            data-gallery-alt="{{ $image.alt }}"
+            data-gallery-title="{{ $image.title }}"
+            aria-label="Open {{ $image.title }}"
           >
-          <span class="gallery-card__meta">
-            <span class="gallery-card__title">{{ $image.title }}</span>
-          </span>
-        </button>
-      </figure>
+            {{ partial "portrait-picture.html" (dict
+              "image" $image
+              "resource" .
+              "imgClass" "gallery-card__image"
+              "loading" $loading
+              "decoding" "async"
+              "sizes" $sizes
+            ) }}
+            <span class="gallery-card__meta">
+              <span class="gallery-card__title">{{ $image.title }}</span>
+            </span>
+          </button>
+        </figure>
+      {{ else }}
+        {{ errorf "missing portrait asset %q" $image.source }}
+      {{ end }}
     {{ end }}
   </div>
 

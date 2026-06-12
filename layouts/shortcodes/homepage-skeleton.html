@@ -1,7 +1,15 @@
+{{- $images := site.Data.portretten.images -}}
+{{- $hero := index (where $images "slug" "picturaal-kindportret") 0 -}}
+{{- $strict := index (where $images "slug" "strak-klassiek-portret") 0 -}}
+{{- $panorama := index (where $images "slug" "panoramisch-avondlicht") 0 -}}
+{{- $grain := index (where $images "slug" "korrelig-zwart-wit") 0 -}}
+{{- $chair := index (where $images "slug" "stoelrug") 0 -}}
+{{- $rupture := index (where $images "slug" "schilderachtig-vlak") 0 -}}
+
 <div class="homepage">
   <section class="poster-hero" aria-labelledby="hero-title">
     <div class="poster-rule poster-rule--top" aria-hidden="true"></div>
-    <p class="eyebrow">Artistieke portretfotografie · Den Haag</p>
+    <p class="eyebrow">Artistieke portretfotografie &middot; Den Haag</p>
 
     <h1 class="poster-title poster-title--wrapped" id="hero-title" aria-label="Artistiek portret">
       <span class="poster-title__word">Artis</span>
@@ -11,7 +19,14 @@
     </h1>
 
     <figure class="hero-portrait">
-      <img src="https://zone.photos/images/phart/zonephotos-photoart-2.jpg" alt="Picturaal portret met historische verwijzingen" width="1200" height="1500" loading="eager" decoding="async">
+      {{ partial "portrait-picture.html" (dict
+        "image" $hero
+        "imgClass" "hero-portrait__image"
+        "loading" "eager"
+        "decoding" "async"
+        "fetchpriority" "high"
+        "sizes" "(min-width: 64rem) 28rem, (min-width: 48rem) 40vw, 100vw"
+      ) }}
     </figure>
 
     <div class="hero-note">
@@ -21,7 +36,7 @@
       </svg>
       <p class="hero-note__lead">Een portret tussen fotografische sessie en schilderachtig werk.</p>
       <p>Met aandacht, stilte en ruimte voor een beeld dat aan de muur mag blijven leven.</p>
-      <a class="text-action" href="/contact/">Verken een portret <span aria-hidden="true">↗</span></a>
+      <a class="text-action" href="/contact/">Verken een portret <span aria-hidden="true">&#8599;</span></a>
     </div>
 
     <p class="hero-signature">Theodoor Thomas<br><span>Portretten met gewicht en aanwezigheid</span></p>
@@ -37,25 +52,55 @@
 
   <section class="editorial-grid" aria-label="Geselecteerde portretten">
     <figure class="artwork artwork--strict">
-      <img src="https://zone.photos/images/phart/zonephotos-photoart-3.jpg" alt="Strak klassiek portret" width="1200" height="1500" loading="lazy" decoding="async">
+      {{ partial "portrait-picture.html" (dict
+        "image" $strict
+        "imgClass" "artwork__image"
+        "loading" "lazy"
+        "decoding" "async"
+        "sizes" "(min-width: 64rem) 26rem, (min-width: 48rem) 36vw, 100vw"
+      ) }}
       <figcaption>Strak tegenbeeld <span>02</span></figcaption>
     </figure>
     <div class="editorial-fragment"><span class="fragment-mark" aria-hidden="true"></span><p>Rust is niet hetzelfde als leegte.</p></div>
     <figure class="artwork artwork--panorama">
-      <img src="https://zone.photos/images/life-in-tone/zonephotos-life-in-tone-10.jpg" alt="Panoramisch portret in warm avondlicht" width="1600" height="900" loading="lazy" decoding="async">
+      {{ partial "portrait-picture.html" (dict
+        "image" $panorama
+        "imgClass" "artwork__image"
+        "loading" "lazy"
+        "decoding" "async"
+        "sizes" "100vw"
+      ) }}
       <figcaption>Ruimte voor landschap en mens <span>03</span></figcaption>
     </figure>
     <figure class="artwork artwork--grain">
-      <img src="https://zone.photos/images/life-in-contrast/zonephotos-life-in-contrast-19.jpg" alt="Korrelig zwart-witportret" width="1200" height="1500" loading="lazy" decoding="async">
+      {{ partial "portrait-picture.html" (dict
+        "image" $grain
+        "imgClass" "artwork__image"
+        "loading" "lazy"
+        "decoding" "async"
+        "sizes" "(min-width: 64rem) 26rem, (min-width: 48rem) 36vw, 100vw"
+      ) }}
       <figcaption>Ruw contrast <span>04</span></figcaption>
     </figure>
     <div class="editorial-quote"><p>Het portret hoeft niet uit te leggen wie je bent. Het mag iets achterlaten.</p></div>
     <figure class="artwork artwork--chair">
-      <img src="https://zone.photos/images/life-in-contrast/zonephotos-life-in-contrast-9.jpg" alt="Zwart-witportret achter een stoelrug" width="1400" height="980" loading="lazy" decoding="async">
+      {{ partial "portrait-picture.html" (dict
+        "image" $chair
+        "imgClass" "artwork__image"
+        "loading" "lazy"
+        "decoding" "async"
+        "sizes" "(min-width: 64rem) 32rem, (min-width: 48rem) 42vw, 100vw"
+      ) }}
       <figcaption>Intimiteit zonder drama <span>05</span></figcaption>
     </figure>
     <figure class="artwork artwork--rupture">
-      <img src="https://zone.photos/images/phart/zonephotos-photoart-8.jpg" alt="Portret in een schilderachtig vlak" width="1400" height="1100" loading="lazy" decoding="async">
+      {{ partial "portrait-picture.html" (dict
+        "image" $rupture
+        "imgClass" "artwork__image"
+        "loading" "lazy"
+        "decoding" "async"
+        "sizes" "(min-width: 64rem) 34rem, (min-width: 48rem) 44vw, 100vw"
+      ) }}
       <figcaption>Een kleine afwijking <span>06</span></figcaption>
     </figure>
   </section>
@@ -93,6 +138,6 @@
     <p class="eyebrow">Contact</p>
     <h2 id="contact-title">Een portret begint met een rustig gesprek.</h2>
     <p>Vertel iets over jezelf, of over het beeld dat je zoekt. Een eerste bericht is genoeg.</p>
-    <a class="text-action text-action--large" href="/contact/">Neem contact op <span aria-hidden="true">↗</span></a>
+    <a class="text-action text-action--large" href="/contact/">Neem contact op <span aria-hidden="true">&#8599;</span></a>
   </section>
 </div>

@@ -1,53 +1,65 @@
 [[images]]
+slug = "picturaal-kindportret"
+category = "portretten"
 title = "Picturaal kindportret"
 note = "Een zachte opening met een schilderachtige toon."
-src = "https://zone.photos/images/phart/zonephotos-photoart-2.jpg"
+source = "images/portretten/source/picturaal-kindportret.jpg"
 alt = "Picturaal portret van een kind"
-width = 1200
-height = 1500
+width = 1067
+height = 1334
 orientation = "portrait"
 
 [[images]]
+slug = "strak-klassiek-portret"
+category = "portretten"
 title = "Strak klassiek portret"
 note = "Rust en eenvoud als tegenwicht."
-src = "https://zone.photos/images/phart/zonephotos-photoart-3.jpg"
+source = "images/portretten/source/strak-klassiek-portret.jpg"
 alt = "Strak klassiek portret"
-width = 1200
-height = 1500
+width = 1095
+height = 1334
 orientation = "portrait"
 
 [[images]]
+slug = "panoramisch-avondlicht"
+category = "portretten"
 title = "Panoramisch avondlicht"
 note = "Brede ademruimte voor de reeks."
-src = "https://zone.photos/images/life-in-tone/zonephotos-life-in-tone-10.jpg"
+source = "images/portretten/source/panoramisch-avondlicht.jpg"
 alt = "Panoramisch portret in warm avondlicht"
-width = 1600
-height = 900
+width = 2001
+height = 1334
 orientation = "panorama"
 
 [[images]]
+slug = "korrelig-zwart-wit"
+category = "portretten"
 title = "Korrelig zwart-wit"
 note = "Een iets rauwere toon in de reeks."
-src = "https://zone.photos/images/life-in-contrast/zonephotos-life-in-contrast-19.jpg"
+source = "images/portretten/source/korrelig-zwart-wit.jpg"
 alt = "Korrelig zwart-witportret van een man"
-width = 1200
-height = 1500
+width = 1039
+height = 1334
 orientation = "portrait"
 
 [[images]]
+slug = "stoelrug"
+category = "portretten"
 title = "Stoelrug"
 note = "Dichterbij, met ruimte in de blik."
-src = "https://zone.photos/images/life-in-contrast/zonephotos-life-in-contrast-9.jpg"
+source = "images/portretten/source/stoelrug.jpg"
 alt = "Zwart-witportret van een vrouw, half verborgen achter een stoelrug"
-width = 1400
-height = 980
+width = 2005
+height = 1334
 orientation = "landscape"
 
 [[images]]
+slug = "schilderachtig-vlak"
+category = "portretten"
 title = "Schilderachtig vlak"
 note = "Een kleine verrassing in de reeks."
-src = "https://zone.photos/images/phart/zonephotos-photoart-8.jpg"
+source = "images/portretten/source/schilderachtig-vlak.jpg"
 alt = "Portret dat oplicht uit een schilderachtig vlak"
-width = 1400
-height = 1100
-orientation = "landscape"
+width = 932
+height = 1334
+orientation = "portrait"
