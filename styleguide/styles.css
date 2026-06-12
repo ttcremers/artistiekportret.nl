@@ -211,7 +211,6 @@ button:focus-visible {
 
 .hero-portrait {
   position: relative;
-  z-index: 3;
   grid-column: 2;
   grid-row: 2 / 4;
   align-self: end;
@@ -235,7 +234,6 @@ button:focus-visible {
 }
 
 .hero-note {
-  z-index: 4;
   grid-column: 3;
   grid-row: 2;
   align-self: center;
@@ -284,7 +282,6 @@ button:focus-visible {
 }
 
 .hero-signature {
-  z-index: 4;
   grid-column: 1;
   grid-row: 3;
   align-self: end;
@@ -306,7 +303,6 @@ button:focus-visible {
 }
 
 .hero-index {
-  z-index: 4;
   grid-column: 3;
   grid-row: 3;
   align-self: end;
@@ -316,20 +312,6 @@ button:focus-visible {
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.12em;
-}
-
-.hero-gesture {
-  position: absolute;
-  top: clamp(13rem, 19vw, 18rem);
-  right: clamp(1.3rem, 5vw, 7rem);
-  z-index: 2;
-  width: min(31vw, 27rem);
-  fill: none;
-  opacity: 0.72;
-  stroke: var(--gold);
-  stroke-linecap: round;
-  stroke-width: 3;
-  transform: rotate(-5deg);
 }
 
 .editorial-intro,
@@ -713,12 +695,6 @@ button:focus-visible {
   .hero-index {
     grid-column: 2;
   }
-
-  .hero-gesture {
-    top: 17rem;
-    right: -3rem;
-    width: 26rem;
-  }
 }
 
 @media (max-width: 52rem) {
@@ -760,12 +736,6 @@ button:focus-visible {
   .hero-portrait {
     width: min(86%, 29rem);
     margin: -1rem auto 0;
-  }
-
-  .hero-gesture {
-    top: 20rem;
-    right: -6rem;
-    width: 24rem;
   }
 
   .hero-note {
