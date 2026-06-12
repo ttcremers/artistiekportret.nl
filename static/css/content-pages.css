@@ -1,0 +1,12 @@
+.page-shell .intro {
+  max-width: 44rem;
+  padding: clamp(3rem, 7vw, 6rem) 0;
+}
+
+.page-shell .intro h1 {
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.page-shell .intro h2 {
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+}
