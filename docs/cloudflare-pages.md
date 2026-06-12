@@ -49,7 +49,7 @@ Set `HUGO_VERSION=0.154.5` in both the Production and Preview environments so bo
 5. Set `PUBLIC_BASE_URL=https://artistiekportret.nl/` only in Production.
 6. Set the production branch to `main`.
 7. Leave preview deployments enabled for all non-production branches.
-8. Add the custom domain later, once DNS access is available.
+8. Use the [domain cutover operator checklist](domain-cutover.md) when the public domain can be connected.
 
 ## Search discovery
 
