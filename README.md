@@ -52,6 +52,7 @@ The work sits between a photographic session and a painted portrait. The offer i
 - [Architecture](docs/architecture.md)
 - [Cloudflare Pages deployment](docs/cloudflare-pages.md)
 - [Domain cutover operator checklist](docs/domain-cutover.md)
+- [Runtime QA checklist](docs/runtime-qa-checklist.md)
 - [Google Search Console launch notes](docs/search-console.md)
 - [Roadmap](docs/roadmap.md)
 
