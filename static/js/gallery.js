@@ -6,13 +6,11 @@
   const dialog = document.querySelector('[data-gallery-dialog]');
   const dialogImage = dialog?.querySelector('[data-gallery-dialog-image]');
   const dialogTitle = dialog?.querySelector('[data-gallery-dialog-title]');
-  const dialogNote = dialog?.querySelector('[data-gallery-dialog-note]');
-  const dialogCaption = dialog?.querySelector('[data-gallery-dialog-caption]');
   const closeButton = dialog?.querySelector('[data-gallery-close]');
   const prevButton = dialog?.querySelector('[data-gallery-prev]');
   const nextButton = dialog?.querySelector('[data-gallery-next]');
 
-  if (!dialog || !dialogImage || !dialogTitle || !dialogNote || !dialogCaption || !closeButton || !prevButton || !nextButton) {
+  if (!dialog || !dialogImage || !dialogTitle || !closeButton || !prevButton || !nextButton) {
     return;
   }
 
@@ -26,13 +24,18 @@
     const button = getItem(currentIndex);
     const image = button.querySelector('img');
 
-    dialogImage.src = image.getAttribute('src') || '';
-    dialogImage.alt = image.getAttribute('alt') || '';
-    dialogImage.width = image.getAttribute('width') || '';
-    dialogImage.height = image.getAttribute('height') || '';
+    dialogImage.src = button.dataset.gallerySrc || image?.currentSrc || image?.src || '';
+    if (image?.srcset) {
+      dialogImage.srcset = image.srcset;
+      dialogImage.sizes = 'min(90vw, 80rem)';
+    } else {
+      dialogImage.removeAttribute('srcset');
+      dialogImage.removeAttribute('sizes');
+    }
+    dialogImage.alt = image?.getAttribute('alt') || '';
+    dialogImage.width = image?.getAttribute('width') || '';
+    dialogImage.height = image?.getAttribute('height') || '';
     dialogTitle.textContent = button.dataset.galleryTitle || '';
-    dialogNote.textContent = button.dataset.galleryNote || '';
-    dialogCaption.textContent = image.getAttribute('alt') || '';
   };
 
   const open = (index, trigger) => {
