@@ -35,5 +35,5 @@ Before implementing or redesigning a production page:
 - Desktop and tablet: title, portrait and note remain separate columns.
 - Title and portrait may sit close together but must never overlap.
 - The hero composition is top-anchored below the eyebrow; extra vertical whitespace belongs below the work, not above it.
-- The gold SVG gesture sits behind the hero note. Text remains readable above it.
-- Mobile: title, portrait and note stack. The SVG gesture is hidden.
+- The hero note stays readable without decorative linework behind it.
+- Mobile: title, portrait and note stack cleanly.

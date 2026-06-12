@@ -8,9 +8,9 @@
 
 .poster-hero {
   display: grid;
-  grid-template-columns: minmax(12rem, 0.82fr) minmax(34rem, 1.36fr) minmax(18rem, 0.78fr);
+  grid-template-columns: minmax(10rem, 0.68fr) minmax(40rem, 1.52fr) minmax(13rem, 0.56fr);
   grid-template-rows: auto auto 1fr;
-  column-gap: clamp(3rem, 4vw, 5.25rem);
+  column-gap: clamp(2rem, 3vw, 4rem);
   row-gap: 0;
   min-height: clamp(64rem, 96vh, 78rem);
 }
@@ -42,14 +42,12 @@
   grid-row: 2 / 4;
   align-self: start;
   justify-self: stretch;
-  width: min(100%, 48rem);
+  width: min(100%, 52rem);
   max-width: none;
   margin: clamp(3rem, 5vw, 5rem) 0 0;
 }
 
 .hero-note {
-  position: relative;
-  z-index: 2;
   grid-column: 3;
   grid-row: 2;
   align-self: start;
@@ -57,25 +55,6 @@
   max-width: 24rem;
   margin-top: clamp(3rem, 5vw, 5rem);
   padding-top: var(--space-4);
-}
-
-.hero-note > *:not(.hero-gesture) {
-  position: relative;
-  z-index: 2;
-}
-
-.hero-note__lead {
-  z-index: 5;
-}
-
-.hero-gesture {
-  position: absolute;
-  top: -3rem;
-  right: -2rem;
-  z-index: 1;
-  width: min(30vw, 26rem);
-  max-width: none;
-  pointer-events: none;
 }
 
 .hero-signature {
@@ -97,8 +76,8 @@
 
 @media (max-width: 78rem) {
   .poster-hero {
-    grid-template-columns: minmax(11rem, 0.74fr) minmax(29rem, 1.28fr) minmax(16rem, 0.72fr);
-    column-gap: clamp(2.25rem, 3vw, 3.5rem);
+    grid-template-columns: minmax(9.5rem, 0.64fr) minmax(36rem, 1.5fr) minmax(12rem, 0.58fr);
+    column-gap: clamp(1.75rem, 2.6vw, 3.25rem);
     min-height: 72rem;
   }
 
@@ -110,7 +89,7 @@
   }
 
   .hero-portrait {
-    width: min(100%, 44rem);
+    width: min(100%, 48rem);
     margin-top: clamp(2.5rem, 4vw, 4rem);
   }
 
@@ -119,11 +98,6 @@
     margin-top: clamp(2.5rem, 4vw, 4rem);
   }
 
-  .hero-gesture {
-    top: -2.4rem;
-    right: -2.5rem;
-    width: 22rem;
-  }
 }
 
 @media (max-width: 64rem) {
@@ -149,7 +123,7 @@
   .hero-portrait {
     grid-column: 2;
     grid-row: 2 / 4;
-    width: min(100%, 42rem);
+    width: min(100%, 44rem);
     margin-top: 2rem;
   }
 
@@ -173,11 +147,6 @@
     margin-top: 0;
   }
 
-  .hero-gesture {
-    top: -2.25rem;
-    right: -1.75rem;
-    width: 19rem;
-  }
 }
 
 @media (max-width: 52rem) {
@@ -199,6 +168,8 @@
   }
 
   .poster-title--wrapped {
+    position: static;
+    inset: auto;
     max-width: 4.45ch;
     margin-top: 2rem;
     padding-right: 0;
@@ -214,10 +185,6 @@
   .hero-note {
     max-width: 34rem;
     margin-top: var(--space-6);
-  }
-
-  .hero-gesture {
-    display: none;
   }
 
   .hero-signature,
