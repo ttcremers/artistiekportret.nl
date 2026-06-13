@@ -1,6 +1,7 @@
 +++
 title = "Over mij"
 description = "Over Theodoor Thomas en zijn benadering van artistieke portretfotografie in Den Haag: rustig, aandachtig en in ontwikkeling."
+featureImage = { source = "images/about/theodoor-thomas-self-portrait.jpg", width = 1001, height = 1334, alt = "Zelfportret van Theodoor Thomas met rode muts in een schilderachtige historische setting" }
 +++
 
 Ik maak portretten voor mensen die zoeken naar meer dan een goede foto.

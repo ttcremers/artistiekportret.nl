@@ -1,0 +1,13 @@
+{{- $image := .image -}}
+{{- if $image -}}
+<figure class="content-page__feature content-page__feature--portrait">
+  {{ partial "portrait-picture.html" (dict
+    "image" $image
+    "imgClass" "content-page__feature-image"
+    "loading" "eager"
+    "decoding" "async"
+    "fetchpriority" "high"
+    "sizes" "(min-width: 78rem) 34rem, (min-width: 52rem) 42vw, 100vw"
+  ) }}
+</figure>
+{{- end -}}
