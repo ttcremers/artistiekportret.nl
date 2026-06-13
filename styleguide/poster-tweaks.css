@@ -173,11 +173,11 @@
     display: block;
     width: 100%;
     max-width: none;
-    margin: 2rem 0 0;
+    margin: 1.25rem 0 0;
     padding-right: 0;
-    font-size: clamp(1.875rem, 10.5vw, 3.15rem);
-    line-height: 0.88;
-    text-align: right;
+    font-size: clamp(4rem, 16vw, 5.4rem);
+    line-height: 0.82;
+    text-align: left;
   }
 
   .poster-title--wrapped::before,
@@ -192,7 +192,7 @@
 
   .poster-title--wrapped::after {
     content: "Portret";
-    margin-top: 0.08em;
+    margin-top: 0.02em;
   }
 
   .poster-title__word {
@@ -201,7 +201,7 @@
 
   .hero-portrait {
     width: min(100%, 38rem);
-    margin-top: 3.25rem;
+    margin-top: 0.9rem;
   }
 
   .hero-note {
