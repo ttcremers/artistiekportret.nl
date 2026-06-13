@@ -1,4 +1,20 @@
 {{ define "main" }}
+{{- $featureImage := .Params.featureImage -}}
+{{- if $featureImage -}}
+<main id="main-content" class="page-shell content-page content-page--has-feature">
+  <section class="content-page__hero">
+    {{ partial "content-feature-image.html" (dict "image" $featureImage) }}
+
+    <div class="content-page__content">
+      <p class="kicker">{{ .Section | humanize }}</p>
+      <h1>{{ .Title }}</h1>
+      <div class="measure">
+        {{ .Content }}
+      </div>
+    </div>
+  </section>
+</main>
+{{- else -}}
 <main id="main-content" class="page-shell">
   <section class="intro measure">
     <p class="kicker">{{ .Section | humanize }}</p>
@@ -6,4 +22,5 @@
     {{ .Content }}
   </section>
 </main>
+{{- end -}}
 {{ end }}
