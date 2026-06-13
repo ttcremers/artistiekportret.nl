@@ -1,0 +1,29 @@
+{{ define "main" }}
+<main id="main-content" class="page-shell about-page">
+  <section class="about-page__hero">
+    <figure class="about-page__portrait">
+      {{ partial "portrait-picture.html" (dict
+        "image" (dict
+          "source" "images/about/theodoor-thomas-self-portrait.jpg"
+          "width" 1001
+          "height" 1334
+          "alt" "Zelfportret van Theodoor Thomas met rode muts in een schilderachtige historische setting"
+        )
+        "imgClass" "about-page__portrait-image"
+        "loading" "eager"
+        "decoding" "async"
+        "fetchpriority" "high"
+        "sizes" "(min-width: 78rem) 34rem, (min-width: 52rem) 42vw, 100vw"
+      ) }}
+    </figure>
+
+    <div class="about-page__content">
+      <p class="kicker">{{ .Section | humanize }}</p>
+      <h1>{{ .Title }}</h1>
+      <div class="measure">
+        {{ .Content }}
+      </div>
+    </div>
+  </section>
+</main>
+{{ end }}
